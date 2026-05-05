@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Minh Khang — Principal AI/ML Engineer</title>
+    <meta name="description" content="Principal AI/ML Engineer with 11+ years at Google DeepMind, Grab, VinAI, Microsoft. 23 ISI papers, NeurIPS Outstanding Paper, Forbes 30 Under 30. Available for senior IC/Tech-Lead roles.">
+    <meta property="og:title" content="Nguyen Minh Khang — Principal AI/ML Engineer">
+    <meta property="og:description" content="Principal AI/ML Engineer with 11+ years shipping LLMs, Computer Vision and MLOps at Google DeepMind, Grab, VinAI and Microsoft.">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://minhkhang.dev">
+
+    <!-- Fonts: Inter & Roboto (Fallbacks for FS Magistral & PF BeauSans Pro) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // We don't use dark mode toggle per requirements, but good to have explicit
+            theme: {
+                extend: {
+                    colors: {
+                        'viettel-red': '#E30613',
+                        'viettel-red-dark': '#B30000',
+                        'viettel-red-light': '#FF2D2D',
+                        'vt-black': '#0A0A0A',
+                        'vt-dark': '#1A1A1A',
+                        'vt-gray-1': '#4A4A4A',
+                        'vt-gray-2': '#7F7F7F',
+                        'vt-gray-3': '#CCCCCC',
+                        'vt-gray-4': '#F5F5F5',
+                        'vt-white': '#FFFFFF',
+                    },
+                    fontFamily: {
+                        display: ['"FS Magistral"', '"Inter"', 'system-ui', 'sans-serif'],
+                        body: ['"PF BeauSans Pro"', '"Inter"', 'system-ui', 'sans-serif'],
+                        mono: ['"Roboto"', '"Roboto Mono"', 'monospace'],
+                    },
+                    spacing: {
+                        'xs': '4px',
+                        'sm': '8px',
+                        'md': '16px',
+                        'lg': '24px',
+                        'xl': '32px',
+                        '2xl': '48px',
+                        '3xl': '64px',
+                        '4xl': '96px',
+                    },
+                    transitionTimingFunction: {
+                        'enter': 'cubic-bezier(0.4, 0, 0.2, 1)',
+                    },
+                    animation: {
+                        'enter': 'enter 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards',
+                    },
+                    keyframes: {
+                        enter: {
+                            '0%': { opacity: '0', transform: 'translateY(16px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        /* Base Accessibility & Utilities */
+        :focus-visible {
+            outline: 3px solid rgba(227, 6, 19, 0.3) !important;
+            outline-offset: 2px !important;
+        }
+        
+        /* Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #E30613;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 200ms ease-out;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Typography Scales */
+        .text-hero { font-size: 40px; line-height: 1.05; letter-spacing: -0.02em; font-weight: 800; }
+        .text-h2 { font-size: 28px; line-height: 1.15; letter-spacing: -0.01em; font-weight: 700; }
+        .text-h3 { font-size: 20px; line-height: 1.3; font-weight: 500; }
+        @media (min-width: 1024px) {
+            .text-hero { font-size: 72px; }
+            .text-h2 { font-size: 40px; }
+            .text-h3 { font-size: 24px; }
+        }
+
+        /* Interaction specifics */
+        .card-hover:hover {
+            transform: scale(1.02);
+            transition: transform 200ms ease-out, border-color 200ms ease-out;
+            border-color: #E30613;
+        }
+
+        .nav-scrolled {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid #CCCCCC;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+        }
+    </style>
+
+    <!-- Schema.org Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nguyen Minh Khang",
+      "jobTitle": "Principal AI/ML Engineer",
+      "email": "minh.khang@gmail.com",
+      "url": "https://minhkhang.dev",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Carnegie Mellon University"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "ETH Zürich"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "HUST"
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Google DeepMind"
+      },
+      "sameAs": [
+        "https://github.com/minhkhang",
+        "https://linkedin.com/in/minhkhang-ai"
+      ]
+    }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Are you open to relocation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — open to relocation in EU/UK/SG/US (visa support required for some). Also open to fully-remote roles in any timezone."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is your visa / work-permit status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Currently Vietnamese citizen. Update with current visa standing."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What roles and seniority are you considering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Senior IC, Staff, or Principal in AI/ML — research or applied. Tech-lead roles for 5-15 person teams."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is your notice period?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typical 30-60 days."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Remote, hybrid, or on-site preference?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Remote-first, but open to hybrid (≤2 days/week on-site) for the right role. Willing to travel monthly."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Compensation expectations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Open to discuss based on role scope, equity, and total package. Happy to share range over a 15-min call."
+        }
+      }]
+    }
+    </script>
+</head>
+<body class="font-body text-vt-gray-1 bg-vt-white antialiased selection:bg-viettel-red-light selection:text-white">
+
+    <a href="#main-content" class="skip-link font-display font-bold">Skip to content</a>
+
+    <!-- 6.1 NAV -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white">
+        <div class="max-w-[1200px] mx-auto px-lg h-[80px] flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-baseline" aria-label="Minh Khang Home">
+                <span class="font-display font-bold text-[24px] text-vt-black tracking-tight" id="logo-text">Minh Khang</span>
+                <span class="w-[8px] h-[8px] bg-viettel-red rounded-full ml-xs"></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-xl" aria-label="Main Navigation">
+                <a href="#about" class="font-display text-[14px] font-medium text-vt-black hover:text-viettel-red hover:underline decoration-2 underline-offset-4 transition-all" data-i18n="nav_about">About</a>
+                <a href="#experience" class="font-display text-[14px] font-medium text-vt-black hover:text-viettel-red hover:underline decoration-2 underline-offset-4 transition-all" data-i18n="nav_experience">Experience</a>
+                <a href="#projects" class="font-display text-[14px] font-medium text-vt-black hover:text-viettel-red hover:underline decoration-2 underline-offset-4 transition-all" data-i18n="nav_projects">Projects</a>
+                <a href="#publications" class="font-display text-[14px] font-medium text-vt-black hover:text-viettel-red hover:underline decoration-2 underline-offset-4 transition-all" data-i18n="nav_publications">Publications</a>
+                <a href="#contact" class="font-display text-[14px] font-medium text-vt-black hover:text-viettel-red hover:underline decoration-2 underline-offset-4 transition-all" data-i18n="nav_contact">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-lg">
+                <a href="mailto:minh.khang@gmail.com" class="hidden sm:inline-flex items-center justify-center bg-viettel-red hover:bg-viettel-red-dark text-white font-display font-medium text-[14px] px-[18px] py-[10px] rounded-[4px] transition-colors" data-i18n="nav_cta">
+                    Get in touch
+                </a>
+                <!-- Lang Toggle -->
+                <button id="lang-toggle" class="font-mono text-[12px] font-medium text-vt-gray-2 hover:text-vt-black transition-colors flex gap-xs items-center" aria-label="Toggle Language">
+                    <span id="lang-en" class="text-vt-black">EN</span>
+                    <span>/</span>
+                    <span id="lang-vi">VI</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="pt-[80px]">
+
+        <!-- 6.2 HERO -->
+        <section id="about" class="py-4xl px-lg max-w-[1200px] mx-auto animate-on-scroll">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl lg:gap-3xl items-center">
+                <!-- Left Content (60%) -->
+                <div class="lg:col-span-7 flex flex-col items-start gap-lg">
+                    <div class="inline-flex items-center gap-sm bg-[rgba(227,6,19,0.08)] px-[12px] py-[6px] rounded-full">
+                        <span class="w-[6px] h-[6px] bg-viettel-red rounded-full"></span>
+                        <span class="font-mono text-[13px] font-medium text-viettel-red uppercase tracking-[0.1em]" data-i18n="hero_eyebrow">Available for Senior IC / Tech Lead roles · 2026</span>
+                    </div>
+                    
+                    <h1 class="font-display text-hero text-vt-black" data-i18n="hero_h1">
+                        Building <span class="text-viettel-red">AI</span> systems that serve hundreds of millions.
+                    </h1>
+                    
+                    <p class="font-body text-[16px] lg:text-[18px] text-vt-gray-1 leading-[1.6] max-w-[640px]" data-i18n="hero_sub">
+                        Principal AI/ML Engineer with 11+ years shipping LLMs, Computer Vision and MLOps at Google DeepMind, Grab, VinAI and Microsoft. Open to Senior IC and Tech-Lead roles — remote or relocation.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-md mt-sm">
+                        <a href="mailto:minh.khang@gmail.com" class="inline-flex items-center justify-center bg-viettel-red hover:bg-viettel-red-dark text-white font-display font-medium text-[16px] px-[24px] py-[14px] rounded-[4px] transition-colors" data-i18n="hero_cta_primary">
+                            Get in touch &rarr;
+                        </a>
+                        <a href="#cv-download" class="inline-flex items-center justify-center border border-vt-black hover:bg-vt-gray-4 text-vt-black font-display font-medium text-[16px] px-[24px] py-[14px] rounded-[4px] transition-colors" data-i18n="hero_cta_secondary">
+                            Download CV (PDF)
+                        </a>
+                    </div>
+                    
+                    <p class="font-mono text-[13px] text-vt-gray-2 mt-xs" data-i18n="hero_social_proof">
+                        11+ yrs · 23 ISI papers · 18K+ ★ GitHub · 4 patents · 3,000+ citations
+                    </p>
+                    
+                    <div class="mt-lg pt-lg border-t border-vt-gray-3 w-full max-w-[640px]">
+                        <p class="font-mono text-[12px] uppercase tracking-[0.1em] text-vt-gray-2 mb-md" data-i18n="hero_previously">Previously at:</p>
+                        <div class="flex flex-wrap items-center gap-lg lg:gap-xl opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                            <!-- Simulated text logos to represent grayscale logos (since no actual image assets are provided) -->
+                            <span class="font-display font-bold text-[18px] text-vt-black">DeepMind</span>
+                            <span class="font-display font-bold text-[18px] text-vt-black">Grab</span>
+                            <span class="font-display font-bold text-[18px] text-vt-black">VinAI</span>
+                            <span class="font-display font-bold text-[18px] text-vt-black">Microsoft</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Portrait (40%) -->
+                <div class="lg:col-span-5 relative w-full max-w-[400px] mx-auto lg:ml-auto">
+                    <!-- Accent Box -->
+                    <div class="absolute -top-[8px] -left-[8px] w-[64px] h-[64px] bg-viettel-red z-0"></div>
+                    <!-- Portrait Placeholder -->
+                    <div class="relative z-10 w-full aspect-[2/3] rounded-[12px] overflow-hidden bg-gradient-to-b from-vt-gray-1 to-vt-black flex items-center justify-center border border-vt-dark">
+                        <!-- TODO: Replace with real B&W portrait image -->
+                        <span class="font-mono text-[14px] text-vt-gray-3 uppercase tracking-[0.1em] px-lg text-center" data-i18n="hero_portrait_placeholder">[Portrait Placeholder B&W 2:3]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.3 TRUST BAR -->
+        <section class="py-3xl bg-vt-gray-4 border-y border-vt-gray-3">
+            <div class="max-w-[1200px] mx-auto px-lg">
+                
+                <!-- Metrics Grid -->
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-xl lg:gap-3xl mb-3xl">
+                    <div class="flex flex-col gap-xs">
+                        <span class="font-mono text-[48px] font-bold text-viettel-red leading-none counter" data-target="11">0</span>
+                        <span class="font-body text-[14px] text-vt-gray-1" data-i18n="trust_metric_1">Years Experience</span>
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <span class="font-mono text-[48px] font-bold text-viettel-red leading-none counter" data-target="23">0</span>
+                        <span class="font-body text-[14px] text-vt-gray-1" data-i18n="trust_metric_2">ISI / Scopus Papers</span>
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <span class="font-mono text-[48px] font-bold text-viettel-red leading-none flex items-center"><span class="counter" data-target="3000">0</span>+</span>
+                        <span class="font-body text-[14px] text-vt-gray-1" data-i18n="trust_metric_3">Total Citations</span>
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <span class="font-mono text-[48px] font-bold text-viettel-red leading-none flex items-center"><span class="counter" data-target="18">0</span>K+</span>
+                        <span class="font-body text-[14px] text-vt-gray-1" data-i18n="trust_metric_4">GitHub Stars</span>
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <span class="font-mono text-[48px] font-bold text-viettel-red leading-none counter" data-target="4">0</span>
+                        <span class="font-body text-[14px] text-vt-gray-1" data-i18n="trust_metric_5">Patents Granted</span>
+                    </div>
+                    <div class="flex flex-col gap-xs">
+                        <span class="font-mono text-[48px] font-bold text-viettel-red leading-none flex items-center"><span class="counter" data-target="35">0</span>M+</span>
+                        <span class="font-body text-[14px] text-vt-gray-1" data-i18n="trust_metric_6">End-users Served</span>
+                    </div>
+                </div>
+
+                <!-- Featured In -->
+                <div class="flex flex-col lg:flex-row items-start lg:items-center gap-lg mb-xl">
+                    <span class="font-mono text-[12px] uppercase tracking-[0.1em] text-vt-gray-2" data-i18n="trust_featured_in">Featured in:</span>
+                    <div class="flex flex-wrap items-center gap-lg grayscale opacity-60">
+                        <span class="font-display font-bold text-[16px] text-vt-black">Forbes</span>
+                        <span class="font-display font-bold text-[16px] text-vt-black">NeurIPS</span>
+                        <span class="font-display font-bold text-[16px] text-vt-black">KDD</span>
+                        <span class="font-display font-bold text-[16px] text-vt-black">MoST Vietnam</span>
+                        <span class="font-display font-bold text-[16px] text-vt-black">Kaggle</span>
+                    </div>
+                </div>
+
+                <!-- Awards Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+                    <div class="bg-white border border-vt-gray-3 p-[24px] rounded-[8px] flex items-start gap-md">
+                        <span class="text-viettel-red text-[24px] leading-none">★</span>
+                        <div>
+                            <h4 class="font-display text-[16px] font-bold text-vt-black mb-xs" data-i18n="award_1_title">Forbes 30 Under 30 Asia — Technology</h4>
+                            <p class="font-mono text-[12px] text-vt-gray-2" data-i18n="award_1_sub">Forbes Media · 2019</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-vt-gray-3 p-[24px] rounded-[8px] flex items-start gap-md">
+                        <span class="text-viettel-red text-[24px] leading-none">★</span>
+                        <div>
+                            <h4 class="font-display text-[16px] font-bold text-vt-black mb-xs" data-i18n="award_2_title">NeurIPS Outstanding Paper Award</h4>
+                            <p class="font-mono text-[12px] text-vt-gray-2" data-i18n="award_2_sub">NeurIPS Foundation · 2023</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-vt-gray-3 p-[24px] rounded-[8px] flex items-start gap-md">
+                        <span class="text-viettel-red text-[24px] leading-none">★</span>
+                        <div>
+                            <h4 class="font-display text-[16px] font-bold text-vt-black mb-xs" data-i18n="award_3_title">Vietnam AI Grand Prize — 1st Prize</h4>
+                            <p class="font-mono text-[12px] text-vt-gray-2" data-i18n="award_3_sub">MoST Vietnam · 2022</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-vt-gray-3 p-[24px] rounded-[8px] flex items-start gap-md">
+                        <span class="text-viettel-red text-[24px] leading-none">★</span>
+                        <div>
+                            <h4 class="font-display text-[16px] font-bold text-vt-black mb-xs" data-i18n="award_4_title">Kaggle Grandmaster · Rank #38</h4>
+                            <p class="font-mono text-[12px] text-vt-gray-2" data-i18n="award_4_sub">Kaggle/Google · 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.4 CORE STRENGTHS -->
+        <section class="py-4xl max-w-[1200px] mx-auto px-lg animate-on-scroll">
+            <div class="mb-2xl text-center">
+                <span class="font-mono text-[12px] font-medium text-viettel-red tracking-[0.1em] uppercase block mb-sm" data-i18n="strengths_eyebrow">Core Strengths</span>
+                <h2 class="font-display text-h2 text-vt-black mb-md" data-i18n="strengths_h2">What I bring to your team</h2>
+                <p class="font-body text-[18px] text-vt-gray-1" data-i18n="strengths_sub">Three areas where I deliver outsized impact.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white border border-vt-gray-3 p-[32px] rounded-[8px] flex flex-col gap-md">
+                    <svg class="w-[32px] h-[32px] text-viettel-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3 class="font-display text-h3 text-vt-black" data-i18n="strengths_c1_title">LLM & Multilingual NLP</h3>
+                    <p class="font-body text-[16px] text-vt-gray-1" data-i18n="strengths_c1_desc">
+                        Co-architect Gemini Ultra — improved Vietnamese/Thai MMLU by <strong class="text-viettel-red font-bold">34%</strong>. Author of PhoBERT v2 (<strong class="text-viettel-red font-bold">2M+</strong> HF downloads).
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-hover bg-white border border-vt-gray-3 p-[32px] rounded-[8px] flex flex-col gap-md">
+                    <svg class="w-[32px] h-[32px] text-viettel-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                    </svg>
+                    <h3 class="font-display text-h3 text-vt-black" data-i18n="strengths_c2_title">Production MLOps at Scale</h3>
+                    <p class="font-body text-[16px] text-vt-gray-1" data-i18n="strengths_c2_desc">
+                        Built GrabML platform — cut deploy time <strong class="text-viettel-red font-bold">60%</strong> for <strong class="text-viettel-red font-bold">35M+</strong> users; fraud-detection AUC <strong class="text-viettel-red font-bold">0.997</strong>.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-hover bg-white border border-vt-gray-3 p-[32px] rounded-[8px] flex flex-col gap-md">
+                    <svg class="w-[32px] h-[32px] text-viettel-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                    <h3 class="font-display text-h3 text-vt-black" data-i18n="strengths_c3_title">Research → Product</h3>
+                    <p class="font-body text-[16px] text-vt-gray-1" data-i18n="strengths_c3_desc">
+                        NeurIPS Oral 2023 (top 0.5%) shipped to production at DeepMind. KDD 2021 Best Paper Nominee.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.5 FEATURED PROJECTS -->
+        <section id="projects" class="py-4xl bg-white border-t border-vt-gray-3">
+            <div class="max-w-[1200px] mx-auto px-lg">
+                <div class="mb-3xl text-center">
+                    <span class="font-mono text-[12px] font-medium text-viettel-red tracking-[0.1em] uppercase block mb-sm" data-i18n="proj_eyebrow">Projects</span>
+                    <h2 class="font-display text-h2 text-vt-black" data-i18n="proj_h2">Selected Projects</h2>
+                </div>
+
+                <div class="flex flex-col gap-[96px]">
+                    <!-- Project 1 (Text Left, Visual Right) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center animate-on-scroll">
+                        <div class="order-2 lg:order-1 flex flex-col gap-md items-start">
+                            <span class="font-mono text-[12px] font-medium text-viettel-red uppercase tracking-[0.1em] px-[8px] py-[4px] bg-[rgba(227,6,19,0.08)] rounded-[4px]" data-i18n="p1_tag">Open-Source LLM</span>
+                            <h3 class="font-display text-h3 text-vt-black" data-i18n="p1_title">VietLLM-70B</h3>
+                            <p class="font-body text-[16px] text-vt-gray-1" data-i18n="p1_pitch">Open-source Vietnamese LLM. Trained on 2TB data, beats GPT-3.5 on 7/10 Vietnamese benchmarks.</p>
+                            <ul class="font-body text-[16px] text-vt-black flex flex-col gap-sm mt-sm">
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p1_b1"><strong class="text-viettel-red font-bold">9.4K</strong> GitHub stars</span></li>
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p1_b2"><strong class="text-viettel-red font-bold">500K+</strong> HuggingFace downloads</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-sm mt-sm">
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">PyTorch</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">vLLM</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">A100 Cluster</span>
+                            </div>
+                            <a href="#" class="font-display font-medium text-viettel-red hover:text-viettel-red-dark hover:underline decoration-2 underline-offset-4 mt-sm transition-all" data-i18n="p1_link">View on GitHub &rarr;</a>
+                        </div>
+                        <div class="order-1 lg:order-2 w-full">
+                            <!-- Visual Placeholder -->
+                            <div class="border border-vt-gray-3 rounded-[12px] overflow-hidden bg-white shadow-sm">
+                                <div class="bg-vt-gray-4 h-[32px] px-[16px] flex items-center gap-[8px] border-b border-vt-gray-3">
+                                    <div class="w-[12px] h-[12px] rounded-full bg-viettel-red"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                </div>
+                                <div class="aspect-video bg-vt-gray-4 flex items-center justify-center text-vt-gray-2 text-[14px] p-[32px] text-center relative overflow-hidden font-mono uppercase tracking-[0.1em]">
+                                    <!-- TODO: Replace with real screenshot -->
+                                    [VietLLM-70B Screenshot]
+                                    <div class="absolute top-0 left-0 w-full h-[4px] bg-viettel-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Visual Left, Text Right) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center animate-on-scroll">
+                        <div class="order-1 w-full">
+                            <!-- Visual Placeholder -->
+                            <div class="border border-vt-gray-3 rounded-[12px] overflow-hidden bg-white shadow-sm">
+                                <div class="bg-vt-gray-4 h-[32px] px-[16px] flex items-center gap-[8px] border-b border-vt-gray-3">
+                                    <div class="w-[12px] h-[12px] rounded-full bg-viettel-red"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                </div>
+                                <div class="aspect-video bg-vt-gray-4 flex items-center justify-center text-vt-gray-2 text-[14px] p-[32px] text-center relative overflow-hidden font-mono uppercase tracking-[0.1em]">
+                                    <!-- TODO: Replace with real screenshot -->
+                                    [MedVision AI Interface]
+                                    <div class="absolute top-0 left-0 w-full h-[4px] bg-viettel-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-2 flex flex-col gap-md items-start lg:pl-xl">
+                            <span class="font-mono text-[12px] font-medium text-viettel-red uppercase tracking-[0.1em] px-[8px] py-[4px] bg-[rgba(227,6,19,0.08)] rounded-[4px]" data-i18n="p2_tag">Healthcare AI</span>
+                            <h3 class="font-display text-h3 text-vt-black" data-i18n="p2_title">MedVision AI</h3>
+                            <p class="font-body text-[16px] text-vt-gray-1" data-i18n="p2_pitch">Automated medical imaging analysis for early-stage lung cancer detection.</p>
+                            <ul class="font-body text-[16px] text-vt-black flex flex-col gap-sm mt-sm">
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p2_b1"><strong class="text-viettel-red font-bold">94.7%</strong> accuracy rate</span></li>
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p2_b2">Deployed in <strong class="text-viettel-red font-bold">12</strong> hospitals</span></li>
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p2_b3">Production · FDA 510(k) Cleared</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-sm mt-sm">
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">TensorFlow</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">ONNX</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">Azure</span>
+                            </div>
+                            <a href="#" class="font-display font-medium text-viettel-red hover:text-viettel-red-dark hover:underline decoration-2 underline-offset-4 mt-sm transition-all" data-i18n="p2_link">Read case study &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 (Text Left, Visual Right) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center animate-on-scroll">
+                        <div class="order-2 lg:order-1 flex flex-col gap-md items-start">
+                            <span class="font-mono text-[12px] font-medium text-viettel-red uppercase tracking-[0.1em] px-[8px] py-[4px] bg-[rgba(227,6,19,0.08)] rounded-[4px]" data-i18n="p3_tag">MLOps Framework</span>
+                            <h3 class="font-display text-h3 text-vt-black" data-i18n="p3_title">AutoML Pipeline v3</h3>
+                            <p class="font-body text-[16px] text-vt-gray-1" data-i18n="p3_pitch">End-to-end open-source AutoML framework. Automates feature engineering, model selection, hyperparameter tuning.</p>
+                            <ul class="font-body text-[16px] text-vt-black flex flex-col gap-sm mt-sm">
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p3_b1"><strong class="text-viettel-red font-bold">6.2K</strong> GitHub stars</span></li>
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p3_b2">Top <strong class="text-viettel-red font-bold">5</strong> on PapersWithCode</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-sm mt-sm">
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">Ray</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">Optuna</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">Kubernetes</span>
+                            </div>
+                            <a href="#" class="font-display font-medium text-viettel-red hover:text-viettel-red-dark hover:underline decoration-2 underline-offset-4 mt-sm transition-all" data-i18n="p3_link">View on GitHub &rarr;</a>
+                        </div>
+                        <div class="order-1 lg:order-2 w-full">
+                            <!-- Visual Placeholder -->
+                            <div class="border border-vt-gray-3 rounded-[12px] overflow-hidden bg-white shadow-sm">
+                                <div class="bg-vt-gray-4 h-[32px] px-[16px] flex items-center gap-[8px] border-b border-vt-gray-3">
+                                    <div class="w-[12px] h-[12px] rounded-full bg-viettel-red"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                </div>
+                                <div class="aspect-video bg-vt-gray-4 flex items-center justify-center text-vt-gray-2 text-[14px] p-[32px] text-center relative overflow-hidden font-mono uppercase tracking-[0.1em]">
+                                    <!-- TODO: Replace with real screenshot -->
+                                    [AutoML Pipeline CLI/Dashboard]
+                                    <div class="absolute top-0 left-0 w-full h-[4px] bg-viettel-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 (Visual Left, Text Right) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center animate-on-scroll">
+                        <div class="order-1 w-full">
+                            <!-- Visual Placeholder -->
+                            <div class="border border-vt-gray-3 rounded-[12px] overflow-hidden bg-white shadow-sm">
+                                <div class="bg-vt-gray-4 h-[32px] px-[16px] flex items-center gap-[8px] border-b border-vt-gray-3">
+                                    <div class="w-[12px] h-[12px] rounded-full bg-viettel-red"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                    <div class="w-[12px] h-[12px] rounded-full bg-vt-gray-3"></div>
+                                </div>
+                                <div class="aspect-video bg-vt-gray-4 flex items-center justify-center text-vt-gray-2 text-[14px] p-[32px] text-center relative overflow-hidden font-mono uppercase tracking-[0.1em]">
+                                    <!-- TODO: Replace with real screenshot -->
+                                    [ViSpeech Realtime Demo]
+                                    <div class="absolute top-0 left-0 w-full h-[4px] bg-viettel-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-2 flex flex-col gap-md items-start lg:pl-xl">
+                            <span class="font-mono text-[12px] font-medium text-viettel-red uppercase tracking-[0.1em] px-[8px] py-[4px] bg-[rgba(227,6,19,0.08)] rounded-[4px]" data-i18n="p4_tag">Speech AI</span>
+                            <h3 class="font-display text-h3 text-vt-black" data-i18n="p4_title">ViSpeech RT</h3>
+                            <p class="font-body text-[16px] text-vt-gray-1" data-i18n="p4_pitch">Realtime Vietnamese speech recognition integrated in top local messaging apps.</p>
+                            <ul class="font-body text-[16px] text-vt-black flex flex-col gap-sm mt-sm">
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p4_b1"><strong class="text-viettel-red font-bold">&lt;80ms</strong> latency</span></li>
+                                <li class="flex items-start gap-sm"><span class="text-viettel-red">•</span><span data-i18n="p4_b2">Production daily · <strong class="text-viettel-red font-bold">20M+</strong> users</span></li>
+                            </ul>
+                            <div class="flex flex-wrap gap-sm mt-sm">
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">C++</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">TensorRT</span>
+                                <span class="bg-vt-gray-4 text-vt-gray-1 text-[13px] px-[8px] py-[4px] rounded-[4px]">Kafka</span>
+                            </div>
+                            <a href="#" class="font-display font-medium text-viettel-red hover:text-viettel-red-dark hover:underline decoration-2 underline-offset-4 mt-sm transition-all" data-i18n="p4_link">Watch Demo &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.6 CAREER TIMELINE -->
+        <section id="experience" class="py-4xl bg-vt-gray-4 border-t border-vt-gray-3">
+            <div class="max-w-[1000px] mx-auto px-lg">
+                <div class="mb-3xl text-center">
+                    <h2 class="font-display text-h2 text-vt-black" data-i18n="timeline_h2">Career path</h2>
+                </div>
+
+                <div class="relative pl-[16px] md:pl-0 animate-on-scroll">
+                    <!-- Central/Left Line -->
+                    <div class="absolute left-[16px] md:left-[120px] top-0 bottom-0 w-[2px] bg-vt-gray-3"></div>
+
+                    <div class="flex flex-col gap-2xl">
+                        <!-- Job 1 -->
+                        <div class="relative flex flex-col md:flex-row gap-lg md:gap-xl md:items-start group">
+                            <div class="md:w-[120px] shrink-0 md:text-right pt-[4px]">
+                                <span class="font-mono text-[24px] md:text-[32px] lg:text-[48px] font-bold text-viettel-red md:bg-gradient-to-br md:from-viettel-red md:to-viettel-red-dark md:bg-clip-text md:text-transparent">2022</span>
+                            </div>
+                            <!-- Dot -->
+                            <div class="absolute left-[-5px] md:left-[115px] top-[12px] md:top-[20px] w-[12px] h-[12px] rounded-full bg-viettel-red border-2 border-vt-gray-4 shadow-[0_0_0_4px_rgba(245,245,245,1)] group-hover:scale-125 transition-transform"></div>
+                            
+                            <div class="bg-white p-[24px] md:p-[32px] rounded-[8px] border border-vt-gray-3 flex-1 card-hover">
+                                <div class="flex items-center gap-sm mb-xs">
+                                    <!-- Grayscale Logo text fallback -->
+                                    <span class="font-display font-bold text-[14px] text-vt-gray-2 uppercase tracking-[0.1em] group-hover:text-vt-black transition-colors">Google DeepMind</span>
+                                </div>
+                                <h3 class="font-display text-[22px] font-bold text-vt-black mb-xs" data-i18n="job1_title">Principal Research Engineer</h3>
+                                <p class="font-mono text-[12px] text-vt-gray-2 mb-md" data-i18n="job1_meta">London / Remote · 2022 — Present</p>
+                                <p class="font-body text-[15px] text-vt-gray-1 leading-[1.6]" data-i18n="job1_desc">
+                                    Lead 12 engineers on Gemini Ultra; co-architected multilingual capabilities improving Vietnamese/Thai MMLU by <strong class="text-viettel-red font-bold">+34%</strong>; designed RLHF safety-alignment pipeline for <strong class="text-viettel-red font-bold">150+ languages</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="relative flex flex-col md:flex-row gap-lg md:gap-xl md:items-start group">
+                            <div class="md:w-[120px] shrink-0 md:text-right pt-[4px]">
+                                <span class="font-mono text-[24px] md:text-[32px] lg:text-[48px] font-bold text-viettel-red opacity-80">2019</span>
+                            </div>
+                            <div class="absolute left-[-5px] md:left-[115px] top-[12px] md:top-[20px] w-[12px] h-[12px] rounded-full bg-vt-gray-3 border-2 border-vt-gray-4 group-hover:bg-viettel-red transition-colors"></div>
+                            
+                            <div class="bg-white p-[24px] md:p-[32px] rounded-[8px] border border-vt-gray-3 flex-1 card-hover">
+                                <div class="flex items-center gap-sm mb-xs">
+                                    <span class="font-display font-bold text-[14px] text-vt-gray-2 uppercase tracking-[0.1em] group-hover:text-vt-black transition-colors">Grab</span>
+                                </div>
+                                <h3 class="font-display text-[22px] font-bold text-vt-black mb-xs" data-i18n="job2_title">Senior ML Engineer / Tech Lead</h3>
+                                <p class="font-mono text-[12px] text-vt-gray-2 mb-md" data-i18n="job2_meta">Singapore · 2019 — 2022</p>
+                                <p class="font-body text-[15px] text-vt-gray-1 leading-[1.6]" data-i18n="job2_desc">
+                                    Tech-lead realtime recommender system serving <strong class="text-viettel-red font-bold">35M+ users</strong> across SEA; built GrabML platform cutting deploy time by <strong class="text-viettel-red font-bold">60%</strong>; multi-tier fraud detection at AUC <strong class="text-viettel-red font-bold">0.997</strong>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="relative flex flex-col md:flex-row gap-lg md:gap-xl md:items-start group">
+                            <div class="md:w-[120px] shrink-0 md:text-right pt-[4px]">
+                                <span class="font-mono text-[24px] md:text-[32px] lg:text-[48px] font-bold text-viettel-red opacity-60">2017</span>
+                            </div>
+                            <div class="absolute left-[-5px] md:left-[115px] top-[12px] md:top-[20px] w-[12px] h-[12px] rounded-full bg-vt-gray-3 border-2 border-vt-gray-4 group-hover:bg-viettel-red transition-colors"></div>
+                            
+                            <div class="bg-white p-[24px] md:p-[32px] rounded-[8px] border border-vt-gray-3 flex-1 card-hover">
+                                <div class="flex items-center gap-sm mb-xs">
+                                    <span class="font-display font-bold text-[14px] text-vt-gray-2 uppercase tracking-[0.1em] group-hover:text-vt-black transition-colors">VinAI Research</span>
+                                </div>
+                                <h3 class="font-display text-[22px] font-bold text-vt-black mb-xs" data-i18n="job3_title">Research Scientist</h3>
+                                <p class="font-mono text-[12px] text-vt-gray-2 mb-md" data-i18n="job3_meta">Hanoi, VN · 2017 — 2019</p>
+                                <p class="font-body text-[15px] text-vt-gray-1 leading-[1.6]" data-i18n="job3_desc">
+                                    Authored PhoBERT v2 — Vietnamese NLP model with <strong class="text-viettel-red font-bold">2M+</strong> HuggingFace downloads; led publications at CVPR 2021, ICCV 2021; mentored <strong class="text-viettel-red font-bold">6</strong> PhD/MSc students.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Job 4 -->
+                        <div class="relative flex flex-col md:flex-row gap-lg md:gap-xl md:items-start group">
+                            <div class="md:w-[120px] shrink-0 md:text-right pt-[4px]">
+                                <span class="font-mono text-[24px] md:text-[32px] lg:text-[48px] font-bold text-viettel-red opacity-40">2014</span>
+                            </div>
+                            <div class="absolute left-[-5px] md:left-[115px] top-[12px] md:top-[20px] w-[12px] h-[12px] rounded-full bg-vt-gray-3 border-2 border-vt-gray-4 group-hover:bg-viettel-red transition-colors"></div>
+                            
+                            <div class="bg-white p-[24px] md:p-[32px] rounded-[8px] border border-vt-gray-3 flex-1 card-hover">
+                                <div class="flex items-center gap-sm mb-xs">
+                                    <span class="font-display font-bold text-[14px] text-vt-gray-2 uppercase tracking-[0.1em] group-hover:text-vt-black transition-colors">Microsoft Azure AI</span>
+                                </div>
+                                <h3 class="font-display text-[22px] font-bold text-vt-black mb-xs" data-i18n="job4_title">Machine Learning Engineer</h3>
+                                <p class="font-mono text-[12px] text-vt-gray-2 mb-md" data-i18n="job4_meta">Redmond, WA · 2014 — 2017</p>
+                                <p class="font-body text-[15px] text-vt-gray-1 leading-[1.6]" data-i18n="job4_desc">
+                                    Built Vietnamese ASR for Azure Cognitive Services — reduced WER from <strong class="text-viettel-red font-bold">18% → 7.4%</strong>; shipped to thousands of enterprise customers globally.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV Download -->
+                    <div class="mt-2xl md:ml-[160px] text-center md:text-left">
+                        <a id="cv-download" href="#" class="inline-flex items-center justify-center border border-vt-black hover:bg-vt-black hover:text-white text-vt-black font-display font-medium text-[16px] px-[24px] py-[14px] rounded-[4px] transition-colors" data-i18n="timeline_cv_btn">
+                            Download full CV (PDF) &rarr;
+                        </a>
+                        <p class="font-mono text-[12px] text-vt-gray-2 mt-sm" data-i18n="timeline_cv_sub">Updated quarterly · 2 pages</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.7 TECH STACK -->
+        <section class="py-3xl bg-white border-t border-vt-gray-3">
+            <div class="max-w-[1200px] mx-auto px-lg text-center">
+                <h2 class="font-display text-h3 text-vt-black mb-xl" data-i18n="tech_h2">Tech Stack</h2>
+                
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-md lg:gap-lg">
+                    <!-- Tool cards - abstracting visual logos to clean text boxes per precision requirement -->
+                    <!-- AI/ML -->
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">PyTorch</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">JAX/XLA</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[14px] text-vt-gray-1 group-hover:text-viettel-red transition-colors text-center">HuggingFace</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">vLLM</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">TensorRT</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">ONNX</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">Ray</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">MLflow</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors text-center">W & B</span>
+                    </div>
+                    
+                    <!-- Infra -->
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[14px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">Kubernetes</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">Spark</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">Kafka</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">GCP</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">AWS</span>
+                    </div>
+                    <div class="bg-vt-gray-4 rounded-[8px] p-[16px] flex flex-col items-center justify-center aspect-square border border-transparent hover:border-viettel-red transition-colors group">
+                        <span class="font-display font-bold text-[16px] text-vt-gray-1 group-hover:text-viettel-red transition-colors">Azure</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.8 FAQ -->
+        <section class="py-4xl border-t border-vt-gray-3 bg-white">
+            <div class="max-w-[768px] mx-auto px-lg">
+                <div class="mb-2xl text-center">
+                    <h2 class="font-display text-h2 text-vt-black" data-i18n="faq_h2">Frequently asked</h2>
+                </div>
+
+                <div class="flex flex-col">
+                    <!-- Q1 -->
+                    <div class="border-b border-vt-gray-3">
+                        <button class="w-full text-left py-[24px] flex items-center justify-between focus-visible:outline-none focus-visible:bg-vt-gray-4 rounded-sm" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="font-display text-[18px] font-bold text-vt-black pr-lg" data-i18n="faq_q1">Are you open to relocation?</span>
+                            <span class="w-[24px] h-[24px] flex items-center justify-center text-viettel-red transform transition-transform duration-200">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="overflow-hidden max-h-0 transition-all duration-300 ease-out" aria-hidden="true">
+                            <p class="font-body text-[16px] text-vt-gray-1 leading-[1.6] pb-[24px]" data-i18n="faq_a1">
+                                Yes — open to relocation in EU/UK/SG/US (visa support required for some). Also open to fully-remote roles in any timezone.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Q2 -->
+                    <div class="border-b border-vt-gray-3">
+                        <button class="w-full text-left py-[24px] flex items-center justify-between focus-visible:outline-none focus-visible:bg-vt-gray-4 rounded-sm" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="font-display text-[18px] font-bold text-vt-black pr-lg" data-i18n="faq_q2">What is your visa / work-permit status?</span>
+                            <span class="w-[24px] h-[24px] flex items-center justify-center text-viettel-red transform transition-transform duration-200">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="overflow-hidden max-h-0 transition-all duration-300 ease-out" aria-hidden="true">
+                            <!-- TODO from candidate -->
+                            <p class="font-body text-[16px] text-vt-gray-1 leading-[1.6] pb-[24px]" data-i18n="faq_a2">
+                                [TODO from candidate — currently Vietnamese citizen. Update with current visa standing]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="border-b border-vt-gray-3">
+                        <button class="w-full text-left py-[24px] flex items-center justify-between focus-visible:outline-none focus-visible:bg-vt-gray-4 rounded-sm" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="font-display text-[18px] font-bold text-vt-black pr-lg" data-i18n="faq_q3">What roles and seniority are you considering?</span>
+                            <span class="w-[24px] h-[24px] flex items-center justify-center text-viettel-red transform transition-transform duration-200">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="overflow-hidden max-h-0 transition-all duration-300 ease-out" aria-hidden="true">
+                            <p class="font-body text-[16px] text-vt-gray-1 leading-[1.6] pb-[24px]" data-i18n="faq_a3">
+                                Senior IC, Staff, or Principal in AI/ML — research or applied. Tech-lead roles for 5-15 person teams.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="border-b border-vt-gray-3">
+                        <button class="w-full text-left py-[24px] flex items-center justify-between focus-visible:outline-none focus-visible:bg-vt-gray-4 rounded-sm" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="font-display text-[18px] font-bold text-vt-black pr-lg" data-i18n="faq_q4">What is your notice period?</span>
+                            <span class="w-[24px] h-[24px] flex items-center justify-center text-viettel-red transform transition-transform duration-200">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="overflow-hidden max-h-0 transition-all duration-300 ease-out" aria-hidden="true">
+                            <!-- TODO from candidate -->
+                            <p class="font-body text-[16px] text-vt-gray-1 leading-[1.6] pb-[24px]" data-i18n="faq_a4">
+                                [TODO from candidate — typical 30-60 days]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="border-b border-vt-gray-3">
+                        <button class="w-full text-left py-[24px] flex items-center justify-between focus-visible:outline-none focus-visible:bg-vt-gray-4 rounded-sm" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="font-display text-[18px] font-bold text-vt-black pr-lg" data-i18n="faq_q5">Remote, hybrid, or on-site preference?</span>
+                            <span class="w-[24px] h-[24px] flex items-center justify-center text-viettel-red transform transition-transform duration-200">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="overflow-hidden max-h-0 transition-all duration-300 ease-out" aria-hidden="true">
+                            <p class="font-body text-[16px] text-vt-gray-1 leading-[1.6] pb-[24px]" data-i18n="faq_a5">
+                                Remote-first, but open to hybrid (≤2 days/week on-site) for the right role. Willing to travel monthly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="border-b border-vt-gray-3">
+                        <button class="w-full text-left py-[24px] flex items-center justify-between focus-visible:outline-none focus-visible:bg-vt-gray-4 rounded-sm" aria-expanded="false" onclick="toggleFaq(this)">
+                            <span class="font-display text-[18px] font-bold text-vt-black pr-lg" data-i18n="faq_q6">Compensation expectations?</span>
+                            <span class="w-[24px] h-[24px] flex items-center justify-center text-viettel-red transform transition-transform duration-200">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </span>
+                        </button>
+                        <div class="overflow-hidden max-h-0 transition-all duration-300 ease-out" aria-hidden="true">
+                            <p class="font-body text-[16px] text-vt-gray-1 leading-[1.6] pb-[24px]" data-i18n="faq_a6">
+                                Open to discuss based on role scope, equity, and total package. Happy to share range over a 15-min call.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.9 FINAL CTA -->
+        <section id="contact" class="py-4xl bg-vt-black text-white text-center">
+            <div class="max-w-[768px] mx-auto px-lg flex flex-col items-center">
+                <div class="inline-flex items-center gap-sm bg-[rgba(227,6,19,0.15)] px-[16px] py-[8px] rounded-full mb-lg">
+                    <span class="w-[6px] h-[6px] bg-viettel-red-light rounded-full"></span>
+                    <span class="font-mono text-[13px] font-medium text-viettel-red-light" data-i18n="cta_eyebrow">Currently reviewing offers — accepting initial conversations through Q2 2026</span>
+                </div>
+                
+                <h2 class="font-display text-[32px] md:text-[48px] font-extrabold mb-md tracking-tight text-white" data-i18n="cta_h2">
+                    Let's discuss what you're building.
+                </h2>
+                
+                <p class="font-body text-[18px] text-vt-gray-3 mb-xl" data-i18n="cta_sub">
+                    Most calls turn into 30-min strategy chats. Some turn into something more.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-lg mb-md">
+                    <a href="mailto:minh.khang@gmail.com" class="inline-flex items-center justify-center bg-viettel-red hover:bg-viettel-red-dark text-white font-display font-medium text-[18px] px-[32px] py-[18px] rounded-[4px] transition-colors" data-i18n="cta_primary">
+                        Schedule a 30-min intro call &rarr;
+                    </a>
+                    <a href="mailto:minh.khang@gmail.com" class="font-body text-[16px] text-viettel-red-light hover:underline decoration-2 underline-offset-4 transition-all" data-i18n="cta_secondary">
+                        Or email directly: minh.khang@gmail.com
+                    </a>
+                </div>
+                
+                <p class="font-mono text-[12px] text-vt-gray-3 mt-sm" data-i18n="cta_micro">
+                    Reply within 24h · NDA available on request · Direct hiring teams only
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6.10 FOOTER -->
+    <footer class="py-3xl bg-vt-black text-vt-gray-3 border-t border-vt-gray-1">
+        <div class="max-w-[1200px] mx-auto px-lg">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2xl mb-2xl">
+                <!-- Col 1 -->
+                <div class="lg:col-span-2 flex flex-col items-start gap-md">
+                    <a href="#" class="flex items-baseline mb-sm">
+                        <span class="font-display font-bold text-[24px] text-white tracking-tight">Minh Khang</span>
+                        <span class="w-[8px] h-[8px] bg-viettel-red rounded-full ml-xs"></span>
+                    </a>
+                    <p class="font-body text-[16px] max-w-[320px] mb-sm" data-i18n="footer_tagline">Building AI that scales — from research to production.</p>
+                    <a href="mailto:minh.khang@gmail.com" class="font-mono text-[14px] text-white hover:text-viettel-red transition-colors">minh.khang@gmail.com</a>
+                    <span class="font-mono text-[14px]">Hanoi, Vietnam</span>
+                </div>
+                
+                <!-- Col 2 -->
+                <div class="flex flex-col items-start gap-md">
+                    <h4 class="font-display font-bold text-[16px] text-white tracking-wide uppercase" data-i18n="footer_nav_head">Navigate</h4>
+                    <a href="#about" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="nav_about">About</a>
+                    <a href="#experience" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="nav_experience">Experience</a>
+                    <a href="#projects" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="nav_projects">Projects</a>
+                    <a href="#publications" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="nav_publications">Publications</a>
+                    <a href="#contact" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="nav_contact">Contact</a>
+                </div>
+
+                <!-- Col 3 & 4 Container for Mobile Stack / Grid for Desktop -->
+                <div class="flex flex-col gap-2xl">
+                    <div class="flex flex-col items-start gap-md">
+                        <h4 class="font-display font-bold text-[16px] text-white tracking-wide uppercase" data-i18n="footer_res_head">Resources</h4>
+                        <a href="#" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="footer_res_1">Download CV (PDF)</a>
+                        <a href="#" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="footer_res_2">Privacy Policy</a>
+                        <a href="#" class="font-body text-[14px] hover:text-white transition-colors" data-i18n="footer_res_3">Read CV online</a>
+                    </div>
+
+                    <div class="flex flex-col items-start gap-md">
+                        <h4 class="font-display font-bold text-[16px] text-white tracking-wide uppercase" data-i18n="footer_con_head">Connect</h4>
+                        <div class="flex items-center gap-md">
+                            <!-- Social Icons (Lucide manual SVG representations) -->
+                            <a href="https://github.com/minhkhang" aria-label="GitHub" class="hover:text-viettel-red transition-colors">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.03c3.15-.38 6.5-1.4 6.5-7.17a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 5.8 3.3 6.8 6.5 7.2a4.8 4.8 0 0 0-1 3.03V22"></path><path d="M9 20c-5 1.5-5-2.5-7-3"></path></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/minhkhang-ai" aria-label="LinkedIn" class="hover:text-viettel-red transition-colors">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="#" aria-label="HuggingFace" class="hover:text-viettel-red transition-colors">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="h-[1px] bg-vt-gray-1 w-full mb-xl"></div>
+
+            <!-- Bottom Bar -->
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-md text-center lg:text-left">
+                <span class="font-mono text-[12px]" data-i18n="footer_copy">© 2026 Nguyễn Minh Khang. All rights reserved.</span>
+                <span class="font-mono text-[12px]" data-i18n="footer_disclaimer">Designed with Viettel Networks brand language. Not affiliated with Viettel Group.</span>
+                <span class="bg-viettel-red text-white font-mono text-[12px] uppercase tracking-[0.1em] px-[8px] py-[4px] rounded-[4px]" data-i18n="footer_available">Available for hire</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // 1. Sticky Nav
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // 2. Animated Counters (Intersection Observer)
+        const counters = document.querySelectorAll('.counter');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalVal = parseInt(target.getAttribute('data-target'));
+                    
+                    if (prefersReducedMotion) {
+                        target.innerText = finalVal;
+                    } else {
+                        animateValue(target, 0, finalVal, 1200);
+                    }
+                    observer.unobserve(target); // Run once
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                // ease-out
+                const easeProgress = 1 - Math.pow(1 - progress, 3);
+                obj.innerHTML = Math.floor(easeProgress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else {
+                    obj.innerHTML = end;
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // 3. Fade-in animation observer
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        const animationObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if(!prefersReducedMotion) {
+                        entry.target.classList.add('animate-enter');
+                    } else {
+                        entry.target.style.opacity = 1;
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        animateElements.forEach(el => animationObserver.observe(el));
+
+        // 4. FAQ Accordion
+        function toggleFaq(button) {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span');
+
+            // Close all other FAQs (Optional, uncomment if you want exclusive accordion)
+            /*
+            document.querySelectorAll('[aria-expanded="true"]').forEach(btn => {
+                if (btn !== button) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.nextElementSibling.style.maxHeight = '0px';
+                    btn.querySelector('span').style.transform = 'rotate(0deg)';
+                }
+            });
+            */
+
+            if (isExpanded) {
+                button.setAttribute('aria-expanded', 'false');
+                content.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                button.setAttribute('aria-expanded', 'true');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.style.transform = 'rotate(45deg)';
+            }
+        }
+
+        // 5. I18n Toggle Logic
+        const dict = {
+            en: {
+                nav_about: "About", nav_experience: "Experience", nav_projects: "Projects", nav_publications: "Publications", nav_contact: "Contact", nav_cta: "Get in touch",
+                hero_eyebrow: "● Available for Senior IC / Tech Lead roles · 2026",
+                hero_h1: "Building <span class='text-viettel-red'>AI</span> systems that serve hundreds of millions.",
+                hero_sub: "Principal AI/ML Engineer with 11+ years shipping LLMs, Computer Vision and MLOps at Google DeepMind, Grab, VinAI and Microsoft. Open to Senior IC and Tech-Lead roles — remote or relocation.",
+                hero_cta_primary: "Get in touch &rarr;", hero_cta_secondary: "Download CV (PDF)",
+                hero_social_proof: "11+ yrs · 23 ISI papers · 18K+ ★ GitHub · 4 patents · 3,000+ citations",
+                hero_previously: "Previously at:", hero_portrait_placeholder: "[Portrait Placeholder B&W 2:3]",
+                trust_metric_1: "Years Experience", trust_metric_2: "ISI / Scopus Papers", trust_metric_3: "Total Citations", trust_metric_4: "GitHub Stars", trust_metric_5: "Patents Granted", trust_metric_6: "End-users Served",
+                trust_featured_in: "Featured in:",
+                award_1_title: "Forbes 30 Under 30 Asia — Technology", award_1_sub: "Forbes Media · 2019",
+                award_2_title: "NeurIPS Outstanding Paper Award", award_2_sub: "NeurIPS Foundation · 2023",
+                award_3_title: "Vietnam AI Grand Prize — 1st Prize", award_3_sub: "MoST Vietnam · 2022",
+                award_4_title: "Kaggle Grandmaster · Rank #38", award_4_sub: "Kaggle/Google · 2021",
+                strengths_eyebrow: "Core Strengths", strengths_h2: "What I bring to your team", strengths_sub: "Three areas where I deliver outsized impact.",
+                strengths_c1_title: "LLM & Multilingual NLP", strengths_c1_desc: "Co-architect Gemini Ultra — improved Vietnamese/Thai MMLU by <strong class='text-viettel-red font-bold'>34%</strong>. Author of PhoBERT v2 (<strong class='text-viettel-red font-bold'>2M+</strong> HF downloads).",
+                strengths_c2_title: "Production MLOps at Scale", strengths_c2_desc: "Built GrabML platform — cut deploy time <strong class='text-viettel-red font-bold'>60%</strong> for <strong class='text-viettel-red font-bold'>35M+</strong> users; fraud-detection AUC <strong class='text-viettel-red font-bold'>0.997</strong>.",
+                strengths_c3_title: "Research → Product", strengths_c3_desc: "NeurIPS Oral 2023 (top 0.5%) shipped to production at DeepMind. KDD 2021 Best Paper Nominee.",
+                proj_eyebrow: "Projects", proj_h2: "Selected Projects",
+                p1_tag: "Open-Source LLM", p1_title: "VietLLM-70B", p1_pitch: "Open-source Vietnamese LLM. Trained on 2TB data, beats GPT-3.5 on 7/10 Vietnamese benchmarks.", p1_b1: "<strong class='text-viettel-red font-bold'>9.4K</strong> GitHub stars", p1_b2: "<strong class='text-viettel-red font-bold'>500K+</strong> HuggingFace downloads", p1_link: "View on GitHub &rarr;",
+                p2_tag: "Healthcare AI", p2_title: "MedVision AI", p2_pitch: "Automated medical imaging analysis for early-stage lung cancer detection.", p2_b1: "<strong class='text-viettel-red font-bold'>94.7%</strong> accuracy rate", p2_b2: "Deployed in <strong class='text-viettel-red font-bold'>12</strong> hospitals", p2_b3: "Production · FDA 510(k) Cleared", p2_link: "Read case study &rarr;",
+                p3_tag: "MLOps Framework", p3_title: "AutoML Pipeline v3", p3_pitch: "End-to-end open-source AutoML framework. Automates feature engineering, model selection, hyperparameter tuning.", p3_b1: "<strong class='text-viettel-red font-bold'>6.2K</strong> GitHub stars", p3_b2: "Top <strong class='text-viettel-red font-bold'>5</strong> on PapersWithCode", p3_link: "View on GitHub &rarr;",
+                p4_tag: "Speech AI", p4_title: "ViSpeech RT", p4_pitch: "Realtime Vietnamese speech recognition integrated in top local messaging apps.", p4_b1: "<strong class='text-viettel-red font-bold'>&lt;80ms</strong> latency", p4_b2: "Production daily · <strong class='text-viettel-red font-bold'>20M+</strong> users", p4_link: "Watch Demo &rarr;",
+                timeline_h2: "Career path",
+                job1_title: "Principal Research Engineer", job1_meta: "London / Remote · 2022 — Present", job1_desc: "Lead 12 engineers on Gemini Ultra; co-architected multilingual capabilities improving Vietnamese/Thai MMLU by <strong class='text-viettel-red font-bold'>+34%</strong>; designed RLHF safety-alignment pipeline for <strong class='text-viettel-red font-bold'>150+ languages</strong>.",
+                job2_title: "Senior ML Engineer / Tech Lead", job2_meta: "Singapore · 2019 — 2022", job2_desc: "Tech-lead realtime recommender system serving <strong class='text-viettel-red font-bold'>35M+ users</strong> across SEA; built GrabML platform cutting deploy time by <strong class='text-viettel-red font-bold'>60%</strong>; multi-tier fraud detection at AUC <strong class='text-viettel-red font-bold'>0.997</strong>.",
+                job3_title: "Research Scientist", job3_meta: "Hanoi, VN · 2017 — 2019", job3_desc: "Authored PhoBERT v2 — Vietnamese NLP model with <strong class='text-viettel-red font-bold'>2M+</strong> HuggingFace downloads; led publications at CVPR 2021, ICCV 2021; mentored <strong class='text-viettel-red font-bold'>6</strong> PhD/MSc students.",
+                job4_title: "Machine Learning Engineer", job4_meta: "Redmond, WA · 2014 — 2017", job4_desc: "Built Vietnamese ASR for Azure Cognitive Services — reduced WER from <strong class='text-viettel-red font-bold'>18% → 7.4%</strong>; shipped to thousands of enterprise customers globally.",
+                timeline_cv_btn: "Download full CV (PDF) &rarr;", timeline_cv_sub: "Updated quarterly · 2 pages",
+                tech_h2: "Tech Stack",
+                faq_h2: "Frequently asked",
+                faq_q1: "Are you open to relocation?", faq_a1: "Yes — open to relocation in EU/UK/SG/US (visa support required for some). Also open to fully-remote roles in any timezone.",
+                faq_q2: "What is your visa / work-permit status?", faq_a2: "[TODO from candidate — currently Vietnamese citizen. Update with current visa standing]",
+                faq_q3: "What roles and seniority are you considering?", faq_a3: "Senior IC, Staff, or Principal in AI/ML — research or applied. Tech-lead roles for 5-15 person teams.",
+                faq_q4: "What is your notice period?", faq_a4: "[TODO from candidate — typical 30-60 days]",
+                faq_q5: "Remote, hybrid, or on-site preference?", faq_a5: "Remote-first, but open to hybrid (≤2 days/week on-site) for the right role. Willing to travel monthly.",
+                faq_q6: "Compensation expectations?", faq_a6: "Open to discuss based on role scope, equity, and total package. Happy to share range over a 15-min call.",
+                cta_eyebrow: "● Currently reviewing offers — accepting initial conversations through Q2 2026", cta_h2: "Let's discuss what you're building.", cta_sub: "Most calls turn into 30-min strategy chats. Some turn into something more.", cta_primary: "Schedule a 30-min intro call &rarr;", cta_secondary: "Or email directly: minh.khang@gmail.com", cta_micro: "Reply within 24h · NDA available on request · Direct hiring teams only",
+                footer_tagline: "Building AI that scales — from research to production.", footer_nav_head: "Navigate", footer_res_head: "Resources", footer_con_head: "Connect",
+                footer_res_1: "Download CV (PDF)", footer_res_2: "Privacy Policy", footer_res_3: "Read CV online",
+                footer_copy: "© 2026 Nguyễn Minh Khang. All rights reserved.", footer_disclaimer: "Designed with Viettel Networks brand language. Not affiliated with Viettel Group.", footer_available: "Available for hire"
+            },
+            vi: {
+                nav_about: "Giới thiệu", nav_experience: "Kinh nghiệm", nav_projects: "Dự án", nav_publications: "Bài báo", nav_contact: "Liên hệ", nav_cta: "Liên hệ ngay",
+                hero_eyebrow: "● Đang tìm kiếm vị trí Senior IC / Tech Lead · 2026",
+                hero_h1: "Xây dựng hệ thống <span class='text-viettel-red'>AI</span> phục vụ hàng trăm triệu người dùng.",
+                hero_sub: "Principal AI/ML Engineer với 11+ năm kinh nghiệm đưa LLM, Computer Vision và MLOps vào thực tế tại Google DeepMind, Grab, VinAI và Microsoft. Sẵn sàng cho vị trí Senior IC và Tech-Lead — làm việc từ xa hoặc thay đổi địa điểm.",
+                hero_cta_primary: "Liên hệ ngay &rarr;", hero_cta_secondary: "Tải CV (PDF)",
+                hero_social_proof: "11+ năm · 23 bài báo ISI · 18K+ ★ GitHub · 4 bằng sáng chế · 3,000+ trích dẫn",
+                hero_previously: "Từng làm việc tại:", hero_portrait_placeholder: "[Ảnh chân dung B&W 2:3]",
+                trust_metric_1: "Năm Kinh nghiệm", trust_metric_2: "Bài báo ISI/Scopus", trust_metric_3: "Lượt trích dẫn", trust_metric_4: "GitHub Stars", trust_metric_5: "Bằng sáng chế", trust_metric_6: "Người dùng",
+                trust_featured_in: "Xuất hiện trên:",
+                award_1_title: "Forbes 30 Under 30 Châu Á — Công nghệ", award_1_sub: "Forbes Media · 2019",
+                award_2_title: "Giải Bài báo Xuất sắc NeurIPS", award_2_sub: "NeurIPS Foundation · 2023",
+                award_3_title: "Giải Nhất — Vietnam AI Grand Prize", award_3_sub: "Bộ KH&CN · 2022",
+                award_4_title: "Kaggle Grandmaster · Hạng #38", award_4_sub: "Kaggle/Google · 2021",
+                strengths_eyebrow: "Thế mạnh cốt lõi", strengths_h2: "Giá trị tôi mang lại cho đội ngũ", strengths_sub: "Ba lĩnh vực tôi tạo ra tác động vượt trội.",
+                strengths_c1_title: "LLM & NLP Đa ngữ", strengths_c1_desc: "Đồng kiến trúc Gemini Ultra — cải thiện <strong class='text-viettel-red font-bold'>34%</strong> điểm MMLU tiếng Việt/Thái. Tác giả PhoBERT v2 (<strong class='text-viettel-red font-bold'>2M+</strong> lượt tải trên HF).",
+                strengths_c2_title: "MLOps Production Quy mô lớn", strengths_c2_desc: "Xây dựng nền tảng GrabML — giảm <strong class='text-viettel-red font-bold'>60%</strong> thời gian triển khai cho <strong class='text-viettel-red font-bold'>35M+</strong> user; hệ thống chống gian lận đạt AUC <strong class='text-viettel-red font-bold'>0.997</strong>.",
+                strengths_c3_title: "Từ Nghiên cứu → Sản phẩm", strengths_c3_desc: "Oral Paper NeurIPS 2023 (top 0.5%) được đưa vào ứng dụng thực tế tại DeepMind. Đề cử Bài báo xuất sắc nhất KDD 2021.",
+                proj_eyebrow: "Dự án", proj_h2: "Dự án Tiêu biểu",
+                p1_tag: "Open-Source LLM", p1_title: "VietLLM-70B", p1_pitch: "LLM mã nguồn mở tiếng Việt. Huấn luyện trên 2TB dữ liệu, vượt GPT-3.5 trên 7/10 benchmark tiếng Việt.", p1_b1: "<strong class='text-viettel-red font-bold'>9.4K</strong> GitHub stars", p1_b2: "<strong class='text-viettel-red font-bold'>500K+</strong> lượt tải HuggingFace", p1_link: "Xem trên GitHub &rarr;",
+                p2_tag: "AI Y tế", p2_title: "MedVision AI", p2_pitch: "Hệ thống phân tích ảnh y tế tự động giúp phát hiện sớm ung thư phổi.", p2_b1: "Độ chính xác <strong class='text-viettel-red font-bold'>94.7%</strong>", p2_b2: "Triển khai tại <strong class='text-viettel-red font-bold'>12</strong> bệnh viện", p2_b3: "Hệ thống thực tế · Được FDA 510(k) cấp phép", p2_link: "Đọc case study &rarr;",
+                p3_tag: "Framework MLOps", p3_title: "AutoML Pipeline v3", p3_pitch: "Framework AutoML mã nguồn mở toàn diện. Tự động hoá feature engineering, chọn mô hình, tinh chỉnh tham số.", p3_b1: "<strong class='text-viettel-red font-bold'>6.2K</strong> GitHub stars", p3_b2: "Top <strong class='text-viettel-red font-bold'>5</strong> trên PapersWithCode", p3_link: "Xem trên GitHub &rarr;",
+                p4_tag: "AI Giọng nói", p4_title: "ViSpeech RT", p4_pitch: "Nhận dạng giọng nói tiếng Việt thời gian thực tích hợp trong các ứng dụng nhắn tin nội địa hàng đầu.", p4_b1: "Độ trễ <strong class='text-viettel-red font-bold'>&lt;80ms</strong>", p4_b2: "Chạy thực tế hàng ngày · <strong class='text-viettel-red font-bold'>20M+</strong> user", p4_link: "Xem Demo &rarr;",
+                timeline_h2: "Hành trình sự nghiệp",
+                job1_title: "Principal Research Engineer", job1_meta: "London / Remote · 2022 — Hiện tại", job1_desc: "Dẫn dắt 12 kỹ sư dự án Gemini Ultra; đồng thiết kế kiến trúc đa ngữ giúp tăng <strong class='text-viettel-red font-bold'>34%</strong> hiệu năng; thiết kế luồng an toàn RLHF cho <strong class='text-viettel-red font-bold'>150+ ngôn ngữ</strong>.",
+                job2_title: "Senior ML Engineer / Tech Lead", job2_meta: "Singapore · 2019 — 2022", job2_desc: "Tech-lead hệ thống đề xuất realtime phục vụ <strong class='text-viettel-red font-bold'>35M+ user</strong> toàn ĐNA; xây dựng GrabML giảm <strong class='text-viettel-red font-bold'>60%</strong> thời gian triển khai model; phát hiện gian lận đạt AUC <strong class='text-viettel-red font-bold'>0.997</strong>.",
+                job3_title: "Research Scientist", job3_meta: "Hà Nội, VN · 2017 — 2019", job3_desc: "Tác giả PhoBERT v2 — mô hình NLP tiếng Việt với <strong class='text-viettel-red font-bold'>2M+</strong> lượt tải HuggingFace; chủ trì các công bố tại CVPR 2021, ICCV 2021; hướng dẫn <strong class='text-viettel-red font-bold'>6</strong> nghiên cứu sinh.",
+                job4_title: "Machine Learning Engineer", job4_meta: "Redmond, WA · 2014 — 2017", job4_desc: "Xây dựng hệ thống ASR tiếng Việt cho Azure Cognitive Services — giảm tỷ lệ lỗi từ <strong class='text-viettel-red font-bold'>18% xuống 7.4%</strong>; phục vụ hàng ngàn khách hàng doanh nghiệp toàn cầu.",
+                timeline_cv_btn: "Tải CV bản đầy đủ (PDF) &rarr;", timeline_cv_sub: "Cập nhật hàng quý · Dài 2 trang",
+                tech_h2: "Công nghệ cốt lõi",
+                faq_h2: "Câu hỏi thường gặp",
+                faq_q1: "Bạn có sẵn sàng chuyển nơi làm việc không?", faq_a1: "Có — tôi sẵn sàng relocate sang EU/UK/SG/US (có thể cần hỗ trợ visa). Cũng sẵn sàng cho các vị trí remote 100% ở mọi múi giờ.",
+                faq_q2: "Tình trạng visa / giấy phép lao động của bạn?", faq_a2: "[TODO từ ứng viên — hiện là công dân Việt Nam. Vui lòng cập nhật tình trạng visa hiện tại]",
+                faq_q3: "Bạn đang tìm kiếm vai trò và cấp bậc nào?", faq_a3: "Senior IC, Staff, hoặc Principal mảng AI/ML — cả hướng nghiên cứu và ứng dụng. Các vị trí Tech-lead cho đội ngũ từ 5-15 người.",
+                faq_q4: "Thời gian báo trước (notice period) của bạn?", faq_a4: "[TODO từ ứng viên — thông thường 30-60 ngày]",
+                faq_q5: "Bạn ưu tiên làm việc từ xa, kết hợp hay tại văn phòng?", faq_a5: "Ưu tiên Remote-first, nhưng cởi mở với hybrid (≤2 ngày/tuần tại VP) cho vị trí phù hợp. Sẵn sàng đi công tác hàng tháng.",
+                faq_q6: "Kỳ vọng thu nhập của bạn là bao nhiêu?", faq_a6: "Cởi mở thảo luận dựa trên phạm vi công việc, cổ phần và tổng đãi ngộ. Sẵn lòng chia sẻ khoảng lương trong cuộc gọi 15 phút.",
+                cta_eyebrow: "● Đang xem xét các cơ hội — nhận trao đổi bước đầu đến hết Q2/2026", cta_h2: "Hãy cùng thảo luận về hệ thống bạn đang xây dựng.", cta_sub: "Hầu hết các cuộc gọi đều trở thành một buổi trò chuyện chiến lược 30 phút hữu ích. Một số sẽ tiến xa hơn.", cta_primary: "Đặt lịch gọi 30 phút &rarr;", cta_secondary: "Hoặc gửi email trực tiếp: minh.khang@gmail.com", cta_micro: "Phản hồi trong 24h · Ký NDA nếu có yêu cầu · Chỉ làm việc trực tiếp với Hiring team",
+                footer_tagline: "Xây dựng hệ thống AI quy mô lớn — từ nghiên cứu đến sản phẩm.", footer_nav_head: "Điều hướng", footer_res_head: "Tài nguyên", footer_con_head: "Kết nối",
+                footer_res_1: "Tải CV (PDF)", footer_res_2: "Chính sách Bảo mật", footer_res_3: "Đọc CV trực tuyến",
+                footer_copy: "© 2026 Nguyễn Minh Khang. Giữ toàn quyền.", footer_disclaimer: "Thiết kế sử dụng ngôn ngữ thương hiệu Viettel Networks. Không trực thuộc Tập đoàn Viettel.", footer_available: "Sẵn sàng làm việc"
+            }
+        };
+
+        const toggleBtn = document.getElementById('lang-toggle');
+        const langEnText = document.getElementById('lang-en');
+        const langViText = document.getElementById('lang-vi');
+        
+        let currentLang = localStorage.getItem('mk_portfolio_lang') || 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('mk_portfolio_lang', lang);
+            
+            // Update UI styles
+            if (lang === 'vi') {
+                langViText.classList.add('text-vt-black');
+                langEnText.classList.remove('text-vt-black');
+            } else {
+                langEnText.classList.add('text-vt-black');
+                langViText.classList.remove('text-vt-black');
+            }
+
+            // Replace Text
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[lang][key]) {
+                    el.innerHTML = dict[lang][key];
+                }
+            });
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            setLanguage(currentLang === 'en' ? 'vi' : 'en');
+        });
+
+        // Initialize Lang
+        setLanguage(currentLang);
+
+    </script>
+</body>
+</html>
